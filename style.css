@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', system-ui, sans-serif;
+    background: #080011;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* LIGHT MODE */
+.light-mode {
+    background: #f7f1ff;
+    color: #111;
+}
+
+.light-mode section,
+.light-mode .card,
+.light-mode .feature-card,
+.light-mode .pillar-card,
+.light-mode .price-card,
+.light-mode .team-card,
+.light-mode .review-slot,
+.light-mode .payment-box,
+.light-mode .qr-box {
+    background: #ffffffdd;
+    color: #111;
+    box-shadow: 0 0 12px #c47effaa;
+}
+
+.light-mode .hero {
+    background: linear-gradient(135deg, #f5e1ff, #ffe8ff);
+    color: #111;
+}
+
+.light-mode .cta {
+    background: #8b2bff;
+}
+
+/* MODE BUTTON */
+.mode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #b000ff;
+    border: none;
+    padding: 11px 13px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    box-shadow: 0 0 15px #b000ff;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* PARTICLES BACKGROUND */
+#particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle, #8a00ff22 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: moveParticles 16s linear infinite;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+@keyframes moveParticles {
+    0% { background-position: 0 0; }
+    100% { background-position: 200px 200px; }
+}
+
+/* HERO */
+.hero {
+    padding: 120px 20px 90px;
+    text-align: center;
+    background: linear-gradient(135deg, #5a00e0, #ad00ff);
+    box-shadow: 0 0 60px #9b00ff99;
+}
+
+.glow-title {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px #a000ff, 0 0 30px #ff00ff;
+}
+
+/* LOGO */
+.mx-logo {
+    width: 110px;
+    margin-bottom: 15px;
+    animation: spinPulse 6s linear infinite;
+    filter: drop-shadow(0 0 25px #b000ff);
+}
+
+@keyframes spinPulse {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.12); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+/* CTA BUTTONS */
+.cta {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #b000ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 0 18px #b000ffcc;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 0 26px #ff00ffcc;
+}
+
+.pulse-glow {
+    animation: pulse 1.8s infinite alternate;
+}
+
+@keyframes pulse {
+    from { box-shadow: 0 0 16px #b000ff; }
+    to { box-shadow: 0 0 32px #ff00ff; }
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* CARDS */
+.card, .pillar-card, .feature-card, .price-card,
+.review-slot, .team-card, .payment-box, .qr-box {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 22px;
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 22px #8000ff60;
+}
+
+.card {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.neon-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.neon-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 32px #d34bff;
+}
+
+/* PROFILE IMAGES */
+.profile-img, .team-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 12px;
+    object-fit: cover;
+    box-shadow: 0 0 20px #b700ffcc;
+}
+
+/* GRID LAYOUTS */
+.grid, .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+}
+
+.pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.price {
+    font-size: 3rem;
+    text-align: center;
+    color: #e6a2ff;
+    margin: 0 0 12px;
+}
+
+/* CONTACT */
+.contact-links {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contact-links a {
+    color: #e6a2ff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #4b0082;
+    background: rgba(10, 0, 30, 0.8);
+    color: #fff;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+}
+
+.contact-form button {
+    align-self: flex-end;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px 10px 35px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* SCROLL ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MODALS */
+#payment-modal,
+#qr-modal {
+    position: fixed;
+    inset: 0;
+    background: #000000bb;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1500;
+}
+
+.payment-box, .qr-box {
+    width: 320px;
+    text-align: center;
+}
+
+.upi-btn, .close-btn, .close-qr {
+    width: 100%;
+    margin-top: 10px;
+    padding: 11px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.upi-btn {
+    background: #b000ff;
+    color: #fff;
+}
+
+.close-btn, .close-qr {
+    background: #222;
+    color: #fff;
+}
+
+.qr-img {
+    width: 230px;
+    border-radius: 10px;
+    margin: 10px 0 5px;
+    box-shadow: 0 0 22px #9000ffcc;
+}
+
+/* DASHBOARD (dashboard.html) */
+.dashboard-body {
+    background: #080011;
+    color: #fff;
+    font-family: 'Poppins', system-ui, sans-serif;
+    padding: 40px 20px;
+}
+
+.dash-container {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.dash-card {
+    padding: 22px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 20px #8000ff60;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .glow-title {
+        font-size: 1.9rem;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+}
